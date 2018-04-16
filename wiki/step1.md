@@ -13,3 +13,17 @@ $ create-react-app #{アプリ名}
 ```
 
 雛形の使用方法は、作成したプロジェクトのREADME.mdに記載されています。
+
+次に、Reduxを導入します。
+作成したプロジェクトのディレクトリに移動し、下記コマンドでパッケージにReduxを追加します。
+React-ReduxはReactとReduxを繋ぐ役割を果たしています。
+```
+$ npm install --save redux
+$ npm install --save react-redux
+```
+
+以上で、ReactとReduxを使用する準備が整いました。
+
+後は、Reduxのチュートリアルを進めていきます。
+
+https://redux.js.org/introduction/examples
