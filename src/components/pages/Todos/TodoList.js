@@ -1,18 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Todo from './Todo'
+import SingleTodo from './SingleTodo'
  
-const TodoList = ({ todos, toggleTodo }) => (
-  <ul>
-    {todos.map(todo =>
-      <Todo
-        key={todo.id}
-        {...todo}
-        onClick={() => toggleTodo(todo.id)}
-      />
-    )}
-  </ul>
-)
+const TodoList = props => {
+  const { todos, toggleTodo } = props
+  return (
+    <ul>
+      {todos.map(todo =>
+        <SingleTodo
+          key={todo.id}
+          {...todo}
+          onClick={() => toggleTodo(todo.id)}
+        />
+      )}
+    </ul>
+  )
+}
  
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
