@@ -4,7 +4,7 @@ import {
   addTodo,
   setVisibilityFilter,
   toggleTodo
-} from '../../../redux/modules/todos'
+} from 'src/redux/modules/todos'
 import Const from '../../../const'
 const { VisibilityType } = Const
  

@@ -6,9 +6,10 @@ import Footer from './Footer'
 
 const Todos = props => {
   const {
+    todos,
+    filter,
     setVisibilityFilter,
     addTodo,
-    todos,
     toggleTodo
   } = props
   return (
@@ -22,14 +23,13 @@ const Todos = props => {
       />
       <Footer
         setVisibilityFilter={setVisibilityFilter}
+        filter={filter}
       />
     </div>
   )
 }
 
-Footer.propTypes = {
-  setVisibilityFilter: PropTypes.func.isRequired,
-  addTodo: PropTypes.func.isRequired,
+Todos.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -37,6 +37,9 @@ Footer.propTypes = {
       text: PropTypes.string.isRequired
     }).isRequired
   ).isRequired,
+  filter: PropTypes.string.isRequired,
+  setVisibilityFilter: PropTypes.func.isRequired,
+  addTodo: PropTypes.func.isRequired,
   toggleTodo: PropTypes.func.isRequired
 }
 

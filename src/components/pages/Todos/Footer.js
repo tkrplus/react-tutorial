@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from '../../atoms/Link'
-import Const from '../../../const'
+import Link from 'src/components/atoms/Link'
+import Const from 'src/const'
 const { VisibilityType } = Const
  
 const Footer = props => {
